@@ -1,5 +1,5 @@
 # Data Mining and Machine Learning 2022: 
-Detecting the difficulty level of French texts Project
+# Detecting the difficulty level of French texts Project
 
 
 ## Participants
