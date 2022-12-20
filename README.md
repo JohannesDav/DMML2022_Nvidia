@@ -16,12 +16,12 @@ XXX
 
 ## Summary of the results
 
-|           | Logistic regression | kNN | Decision Tree | Random Forests | Our method |
-|-----------|---------------------|-----|---------------|----------------|------------|
-| Precision |                     |     |               |                |            |
-| Recall    |                     |     |               |                |            |
-| F1-score  |                     |     |               |                |            |
-| Accuracy  |                     |     |               |                |            |
+|           | Logistic regression |      kNN      | Decision Tree | Random Forests | Our method |
+|-----------|---------------------|---------------|---------------|----------------|------------|
+| Precision |                     |               |               |                |            |
+| Recall    |                     |               |               |                |            |
+| F1-score  |                     |               |               |                |            |
+| Accuracy  |                     |               |               |                |            |
 
 ## Video
 
