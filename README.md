@@ -11,9 +11,11 @@ In the first file (Project_NVIDIA) we applied standard machine learning methods 
 In the second part we tried finding a more creative approach to obtain better accuracy in our results.
 
 In the presence of an original database (the text cannot be found online), the score would lower to that of previous versions without this backwards engineering
+
 ## Approach description
 
 First, we used model XXX
+
 Then we applied the following data cleaning XXX
 
 In addition to that, we used embeddings XXX
