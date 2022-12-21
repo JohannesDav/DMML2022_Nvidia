@@ -26,10 +26,10 @@ In addition to data cleaning XXX, we used the Google API to backtrack the source
 
 |           | Logistic regression |      kNN      | Decision Tree | Random Forests | Our method |
 |-----------|---------------------|---------------|---------------|----------------|------------|
-| Precision |                     |               |               |                |            |
-| Recall    |                     |               |               |                |            |
-| F1-score  |                     |               |               |                |            |
-| Accuracy  |                     |               |               |                |            |
+| Precision |                     |               |               |                |-|
+| Recall    |                     |               |               |                |-|
+| F1-score  |                     |               |               |                |-|
+| Accuracy  |                     |               |               |                |0.74333|
 
 Thanks to this table, it is clearly visible that our model produces far better results than any of the simpler methods. From the first four, the Logistic Regression produces the best results.
 
