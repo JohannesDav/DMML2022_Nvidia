@@ -1,3 +1,4 @@
+
 # DMML22: Detecting the difficulty level of French texts Project
 
 
@@ -10,9 +11,18 @@ The task of this project was to identify the difficulty of French text, accordin
 In the first file (Project_NVIDIA) we applied standard machine learning methods and obtained our first scores.
 In the second part we tried finding a more creative approach to obtain better accuracy in our results.
 
-In the presence of an original database (the text cannot be found online), the score would lower to that of previous versions without this backwards engineering
-
 ## Approach description
+
+### 1. CNN and LSTM trained from scratch
+
+### 2. Camembert fine-tuning
+
+### 3. GPT-3 fine-tuning
+
+### 4. GPT-3-davinci few-shot
+
+### 5. GPT-3 fine-tuning with Google search results
+
 
 First, we used model XXX
 
