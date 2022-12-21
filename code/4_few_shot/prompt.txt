@@ -1,0 +1,7 @@
+French sentences and their corresponding CEFR difficulty level:
+Bonjour et bonne année. -> 0
+Sans plus d'hésitation, il tourna vers la gauche ; son pas sonnait sur la terre durcie, et ce bruit cadencé, monotone, assoupissait en le berçant, le tumulte de son esprit. -> 5
+J'ai retrouvé le plaisir de manger un oeuf à la coque -> 1
+La presse s'est abondamment fait l'écho des effets secondaires ressentis par les soignants de moins de 65 ans. -> 3
+Le Président a promis qu'il tiendrait toutes ses promesses. -> 2
+Ce à quoi s'ajoute l'effet hautement déstabilisateur de la spéculation sur les matières premières. -> 4
