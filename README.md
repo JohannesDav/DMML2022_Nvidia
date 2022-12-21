@@ -4,7 +4,7 @@
 
 ## Participants
 
-Team NVIDIA: Johannes Rudolf David & Emmanuel Hubert
+Team NVIDIA: Johannes-Rudolf David & Emmanuel Hubert
 
 ## Concept
 The task of this project was to identify the difficulty of French text, according to the six CEFR levels.
