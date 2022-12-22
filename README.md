@@ -7,16 +7,16 @@
 Team NVIDIA: Johannes-Rudolf David & Emmanuel Hubert
 
 ## Concept
-The task of this project was to identify the difficulty of French text, according to the six CEFR levels.
-In the first file ([Project_NVIDIA.ipynb](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/Project_NVIDIA.ipynb "Project_NVIDIA.ipynb")) we applied standard machine learning methods and obtained our first scores.
-In the second part we tried finding a more creative approach to obtain better accuracy in our results for the [Kaggle competition](https://www.kaggle.com/competitions/detecting-french-texts-difficulty-level-2022/leaderboard).
+The task of this project was to identify the difficulty of French text, according to the six CEFR levels.  
+In the first file ([Project_NVIDIA.ipynb](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/Project_NVIDIA.ipynb "Project_NVIDIA.ipynb")) we applied standard machine learning methods and obtained our first scores.  
+In the second part we tried finding a more creative approach to obtain better accuracy in our results for the [Kaggle competition](https://www.kaggle.com/competitions/detecting-french-texts-difficulty-level-2022/leaderboard).  
 
 ## Approach description
 
 ### 1. CNN and LSTM trained from scratch
-Sentence encoding / feature extraction: each word is represented as a vector containing either its [fastText embedding](https://fasttext.cc/docs/en/crawl-vectors.html),  its frequency in texts for each CEFR level ([FLELex](http://cental.uclouvain.be/flelex/)), or both.
+Sentence encoding / feature extraction: each word is represented as a vector containing either its [fastText embedding](https://fasttext.cc/docs/en/crawl-vectors.html),  its frequency in texts for each CEFR level ([FLELex](http://cental.uclouvain.be/flelex/)), or both.  
 Even with hyperparameter tuning, these more complex and larger models performed only slightly better than simpler models. This indicates that using pretrained models or augmenting the dataset could be more effective than focussing only on model architecture.
-Using the FLELex word frequencies provided no benefit compared to the embeddings.
+Using the FLELex word frequencies provided no benefit compared to the embeddings.  
 
 #### Accuracy
 CNN word frequencies only: ~0.4  
@@ -38,8 +38,8 @@ The pretrained CamemBERT models, available on Hugging Face, all provided a signi
  - [camemBERT.ipynb](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/2_camemBERT/camemBERT.ipynb "camemBERT.ipynb") - A notebook based on [this example](https://www.kaggle.com/code/houssemayed/camembert-for-french-tweets-classification/notebook) to fine-tune [camemBERT-large](https://huggingface.co/camembert/camembert-large) and to use the fine-tuned model to make predictions.
 
 ### 3. GPT-3 fine-tuning
-The pretrained GPT-3 models, available through the OpenAI api, achieved similar accuracies as CamemBERT.
-These models are multilingual, allowing for more flexibility when experimenting with our dataset. Since using the entire training data was beneficial with camemBERT and GPT-3 Curie, we tried extending the dataset using only high quality examples from [CEFR-SP](https://github.com/yukiar/CEFR-SP/tree/main/CEFR-SP). We also scraped full texts from multiple websites offering French reading exercises labelled by CEFR level and sampled sentences from these texts. Any addition to the original competition dataset yielded worse results. Our augmented models, while perhaps more generalizable, led to lowers scores on Kaggle. This might suggest that there is some bias in the dataset.
+The pretrained GPT-3 models, available through the OpenAI api, achieved similar accuracies as CamemBERT.  
+These models are multilingual, allowing for more flexibility when experimenting with our dataset. Since using the entire training data was beneficial with camemBERT and GPT-3 Curie, we tried extending the dataset using only high quality examples from [CEFR-SP](https://github.com/yukiar/CEFR-SP/tree/main/CEFR-SP). We also scraped full texts from multiple websites offering French reading exercises labelled by CEFR level and sampled sentences from these texts. Any addition to the original competition dataset yielded worse results. Our augmented models, while perhaps more generalizable, led to lowers scores on Kaggle. This might suggest that there is some bias in the dataset.  
 
 #### Accuracy
 Ada with 80% of the dataset: 0.577  
@@ -65,8 +65,8 @@ The model can then be trained on the prepared dataset
 
 
 ### 4. GPT-3-davinci few-shot
-By prompting GPT-3-davinci only with the first example for each class in the dataset, the accuracy achieved was already comparable to some previous methods.
-This method did not contribute to finding our winning solution, but the impressive performance of such an easy and quick method is worth mentioning. The accuracy could probably be improved considerably by adding a few more examples, by hand-picking examples that are very representative of their class or by adapting the examples to the approximated level of the sentence.
+By prompting GPT-3-davinci only with the first example for each class in the dataset, the accuracy achieved was already comparable to some previous methods.  
+This method did not contribute to finding our winning solution, but the impressive performance of such an easy and quick method is worth mentioning. The accuracy could probably be improved considerably by adding a few more examples, by hand-picking examples that are very representative of their class or by adapting the examples to the approximated level of the sentence.  
 
 #### Accuracy
 text-davinci-003 with 6 examples: 0.402  
@@ -77,7 +77,7 @@ text-davinci-003 with 6 examples: 0.402
 
 ### 5. GPT-3 fine-tuning with Google search results
 
-We observed that some easy sentences were labelled as C1 or C2. They all had in common that they were extracted from sources intended for advanced speakers (classical litterature, wikipedia, C2 exams, complex news sources, advances exercices...). We also stumbled across relativelly diffcult sentences labelled as A1 or A2. These were all taken from overall simpler texts (reading exercises, A1 exams, simple news...).
+We observed that some easy sentences were labelled as C1 or C2. They all had in common that they were extracted from sources intended for advanced speakers (classical litterature, wikipedia, C2 exams, complex news sources, advances exercices...). We also stumbled across relativelly diffcult sentences labelled as A1 or A2. These were all taken from overall simpler texts (reading exercises, A1 exams, simple news...).  
 Here are a few examples :
 
  - C2 "Tu mangeas les petits fruits dès que tu les eus cueillis" ([complex exercise](https://oraprdnt.uqtr.uquebec.ca/pls/public/docs/GSC2213/F1880081139_Le_pass__ant_rieur_Exercices_et_corrig_.pdf))
@@ -85,10 +85,10 @@ Here are a few examples :
  - C2 "On peut faire une classe inversée." ([DALF C2](https://www.delfdalf.ch/fileadmin/user_upload/Unterlagen/Exemples_examens/C2/2018_uploads/C2_LSH/c2-nouveau_example1_LSH_transcriptions.pdf))
  - A2 "Et en fait, le cheveu est capable d'absorber jusqu'à huit fois son poids en hydrocarbure" ([francaisfacile.rfi.fr](https://savoirs.rfi.fr/ru/apprendre-enseigner/environnement/ile-maurice-des-cheveux-contre-la-maree-noire/2))
 
-Even for more accuratelly labeled sentences, knowing their source can be a powerful predictor of their class. This advantage is possibly amplified by the fact that sentences sampled from the same text will often be present in both the train and test datasets.
+Even for more accuratelly labeled sentences, knowing their source can be a powerful predictor of their class. This advantage is possibly amplified by the fact that sentences sampled from the same text will often be present in both the train and test datasets.  
 
-In other words, we can say that, for the Kaggle competition, the real task is not to classify arbitratrary sentences, but only parts of existing texts for reading comprehension. Having more information about the source material makes this tasks easier. 
-To approximate this information about the source text, we included the Google search results for the sentence in the prompts.
+In other words, we can say that, for the Kaggle competition, the real task is not to classify arbitratrary sentences, but only parts of existing texts for reading comprehension. Having more information about the source material makes this tasks easier.   
+To approximate this information about the source text, we included the Google search results for the sentence in the prompts.  
 
 #### Accuracy
 Curie with api results: 0.718  
