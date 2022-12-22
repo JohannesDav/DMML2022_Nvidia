@@ -79,7 +79,7 @@ text-davinci-003 with 6 examples: 0.402
  - [classify.py](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/4_few_shot/classify.py "classify.py") - To classify the unlabelled sentences using few-shot learning
  - [cleanResults.py](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/4_few_shot/cleanResults.py "cleanResults.py") - To format the results before submitting to Kaggle
 
-### 5. GPT-3 fine-tuning with Google search results
+### 5. GPT-3 Curie fine-tuning with Google search results
 
 We observed that some easy sentences were labelled as C1 or C2. They all had in common that they were extracted from sources intended for advanced speakers (classical litterature, wikipedia, C2 exams, complex news sources, advances exercices...). We also stumbled across relativelly diffcult sentences labelled as A1 or A2. These were all taken from overall simpler texts (reading exercises, A1 exams, simple news...).  
 Here are a few examples :
