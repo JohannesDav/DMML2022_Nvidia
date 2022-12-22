@@ -6,6 +6,10 @@
 
 Team NVIDIA: Johannes-Rudolf David & Emmanuel Hubert
 
+## Video
+
+https://youtu.be/mGuZrLg_qPE
+
 ## Concept
 The task of this project was to identify the difficulty of French text, according to the six CEFR levels.  
 In the first file ([Project_NVIDIA.ipynb](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/Project_NVIDIA.ipynb "Project_NVIDIA.ipynb")) we applied standard machine learning methods and obtained our first scores.  
@@ -126,10 +130,6 @@ On the gtp3-curie + Google api + Google scrape results: 0.735 → **0.743**
 |  F1-score |0.46400|0.30217|0.31348|0.39999|-|
 
 Thanks to this table, it is clearly visible that our model produces far better results than any of the simpler methods. From the first four, the Logistic Regression produces the best results.
-
-## Video
-
-https://youtu.be/mGuZrLg_qPE
 
 ## License
 
