@@ -105,6 +105,8 @@ Brouillons d'écrivains - Gabarit --- expositions.bnf.fr/brouillons/pedago/chap1
 Lire L'ASSOMMOIR - Émile ZOLA --- textes.libres.free.fr/francais/emile-zola_l-assommoir.htm  
 Level:  
 ```
+Completion: 5
+
 ##### Example 2:
 ```
 Sentence: Bruno Bonnell Le vieil adage "on n'arrête pas le progrès" n'a jamais été aussi vivace. D'autres pays s'équipent en robotique pour atteindre des taux de productivité supérieurs aux nôtres.  
@@ -112,6 +114,8 @@ Search results:
 Les robots remplaceront-ils les humains au travail ? | L'Humanité --- https://www.humanite.fr/.../les-robots-remplaceront-ils-les-humains-au-travail-545785  
 Level:  
 ```
+Completion: 4
+
 ##### Example 3:
 ```
 Sentence: Sa voiture rouge est très rapide.
@@ -119,6 +123,8 @@ Search results:
 No results
 Level:  
 ```
+Completion: 0
+
 #### Accuracy
 Curie with api results: 0.718  
 Curie with api results + scraped results: **0.735**  
