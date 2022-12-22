@@ -97,28 +97,28 @@ To approximate this information about the source text, we included the Google se
 #### Example prompts
 
 ##### Example 1:
-
+```
 Sentence: Quelques coups de battoir partaient encore, espacés, au milieu des rires adoucis, des conversations qui s'empâtaient dans un bruit glouton de mâchoires ; tandis que la machine à vapeur, allant son train, sans repos ni trêve, semblait hausser la voix, vibrante, ronflante, emplissant l'immense salle. Mais pas une des femmes ne l'entendait ; c'était comme la respiration même du lavoir, une haleine ardente amassant sous les poutres du plafond l'éternelle buée qui flottait. La chaleur devenait intolérable ; des rais de soleil entraient à gauche, par les hautes fenêtres, allumant les vapeurs fumantes de nappes opalisées, d'un gris rose et d'un gris bleu très tendre ; et, comme des plaintes s'élevaient, le garçon Charles allait d'une fenêtre à l'autre, tirait des stores de grosse toile ; ensuite, il passa de l'autre côté, du côté de l'ombre, et ouvrit des vasistas.  
 Search results:  
 L'Assommoir/Chapitre I - Wikisource --- https://fr.wikisource.org/wiki/L’Assommoir/Chapitre_I  
 Brouillons d'écrivains - Gabarit --- expositions.bnf.fr/brouillons/pedago/chap1.htm  
 Lire L'ASSOMMOIR - Émile ZOLA --- textes.libres.free.fr/francais/emile-zola_l-assommoir.htm  
 Level:  
-
+```
 ##### Example 2:
-
+```
 Sentence: Bruno Bonnell Le vieil adage "on n'arrête pas le progrès" n'a jamais été aussi vivace. D'autres pays s'équipent en robotique pour atteindre des taux de productivité supérieurs aux nôtres.  
 Search results:  
 Les robots remplaceront-ils les humains au travail ? | L'Humanité --- https://www.humanite.fr/.../les-robots-remplaceront-ils-les-humains-au-travail-545785  
 Level:  
-
+```
 ##### Example 3:
-
+```
 Sentence: Sa voiture rouge est très rapide.
 Search results:
 No results
 Level:  
-
+```
 #### Accuracy
 Curie with api results: 0.718  
 Curie with api results + scraped results: **0.735**  
