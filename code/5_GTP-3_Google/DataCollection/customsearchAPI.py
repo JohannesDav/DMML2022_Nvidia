@@ -5,8 +5,8 @@ import os
 import time
 import json
 
-my_api_key = "AIzaSyAN1qRdyX1jLUZQUdUx8B7gmaqL7x_7JpQ"
-my_cse_id = "b0a582a187f164bda"
+my_api_key = ""
+my_cse_id = ""
 
 
 def google_search(search_term, api_key, cse_id, **kwargs):
