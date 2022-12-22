@@ -91,7 +91,7 @@ Here are a few examples :
 
 Even for more accuratelly labeled sentences, knowing their source can be a powerful predictor of their class. This advantage is possibly amplified by the fact that sentences sampled from the same text will often be present in both the train and test datasets.  
 
-In other words, we can say that, for the Kaggle competition, the real task is not to classify arbitratrary sentences, but only parts of existing texts for reading comprehension. Having more information about the source material makes this tasks easier.   
+In other words, we can say that, for the Kaggle competition, the real task is not to classify arbitratrary sentences, but only parts of existing texts for reading comprehension. Having more information about the source material makes this task easier.   
 To approximate this information about the source text, we included the Google search results for the sentence in the prompts.  
 
 #### Example prompts
