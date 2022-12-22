@@ -103,7 +103,7 @@ Curie with api results + scraped results: **0.735**
 
 ### VW module
 
-We saw that some of the texts we had downloaded when trying to extend the dataset contained some of the sentences in our dataset. These texts are labeled with their difficulty. We observed that if a sentence is found in a text, it has an ~80% chance of being of the same diffuculty level as the text itself. About 15% of the unlabeled dataset is covered, and applying this simple search based classification on top off another model's results can improve the accuracy, especially for weaker models. This obviously exploits the fact that the model is used in a specific test enviromnent (any naming resemblance to a real company is purely coincidental.)
+We saw that some of the texts we had downloaded when trying to extend the dataset contained some of the sentences in our dataset. These texts are labeled with their difficulty. We observed that if a sentence is found in a text, it has an ~80% chance of being of the same diffuculty level as the text itself. About 15% of the unlabeled dataset is covered, and applying this simple search based classification on top off another model's results can improve the accuracy, especially for weaker models. This obviously exploits the fact that the model is used in a specific test enviromnent (any naming resemblance to a real company is purely coincidental).   
 
 #### Accuracy boost
 On the gtp3-curie results: 0.615 → 0.657  
