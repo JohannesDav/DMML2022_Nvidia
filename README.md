@@ -120,10 +120,10 @@ On the gtp3-curie + Google api + Google scrape results: 0.735 → **0.743**
 
 |           | Logistic regression |      kNN      | Decision Tree | Random Forests | Our method |
 |-----------|---------------------|---------------|---------------|----------------|------------|
-| Accuracy  |0.40417|0.31875|0.30833|0.42708|0.74333|
-| Precision |0.41691|0.40304|0.30970|0.43851	|-|
-|   Recall  |0.40417|0.31875|0.30833|0.42708	|-|
-|  F1-score |0.39165|0.30217|0.30529|0.41404|-|
+| Accuracy  |0.46667|0.31875|0.31667|0.41458|0.74333|
+| Precision |0.46556|0.40304|0.31757|0.42082|-|
+|   Recall  |0.46667|0.31875|0.31667|0.41458|-|
+|  F1-score |0.46400|0.30217|0.31348|0.39999|-|
 
 Thanks to this table, it is clearly visible that our model produces far better results than any of the simpler methods. From the first four, the Logistic Regression produces the best results.
 
