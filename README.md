@@ -19,10 +19,10 @@ Even with hyperparameter tuning, these more complex and larger models performed 
 Using the FLELex word frequencies provided no benefit compared to the embeddings.
 
 #### Accuracy
-CNN word frequencies only: ~0.4
-CNN embeddings only: ~0.45
-CNN word frequencies + embeddings: ~0.43
-LSTM word frequencies + embeddings: ~0.47
+CNN word frequencies only: ~0.4  
+CNN embeddings only: ~0.45  
+CNN word frequencies + embeddings: ~0.43  
+LSTM word frequencies + embeddings: ~0.47  
 
 #### Files
  - [encodeData.py](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/1_CNN_LSTM/encodeData.py "encodeData.py") - Vectorize the sentences and save the dataset
@@ -32,8 +32,8 @@ LSTM word frequencies + embeddings: ~0.47
 ### 2. CamemBERT fine-tuning
 The pretrained CamemBERT models, available on Hugging Face, all provided a significant increase in accuracy compared the previous methods.
 #### Accuracy
-5 epochs fine-tuning: 0.579
-11 epochs fine-tuning: 0.586
+5 epochs fine-tuning: 0.579  
+11 epochs fine-tuning: 0.586  
 #### Files
  - [camemBERT.ipynb](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/2_camemBERT/camemBERT.ipynb "camemBERT.ipynb") - A notebook based on [this example](https://www.kaggle.com/code/houssemayed/camembert-for-french-tweets-classification/notebook) to fine-tune [camemBERT-large](https://huggingface.co/camembert/camembert-large) and to use the fine-tuned model to make predictions.
 
@@ -42,9 +42,9 @@ The pretrained GPT-3 models, available through the OpenAI api, achieved similar 
 These models are multilingual, allowing for more flexibility when experimenting with our dataset. Since using the entire training data was beneficial with camemBERT and GPT-3 Curie, we tried extending the dataset using only high quality examples from [CEFR-SP](https://github.com/yukiar/CEFR-SP/tree/main/CEFR-SP). We also scraped full texts from multiple websites offering French reading exercises labelled by CEFR level and sampled sentences from these texts. Any addition to the original competition dataset yielded worse results. Our augmented models, while perhaps more generalizable, led to lowers scores on Kaggle. This might suggest that there is some bias in the dataset.
 
 #### Accuracy
-Ada with 80% of the dataset: 0.577
-Curie with 100% of the dataset: **0.615**
-Curie with 100% of the dataset + CEFR-SP: 0.570
+Ada with 80% of the dataset: 0.577  
+Curie with 100% of the dataset: **0.615**  
+Curie with 100% of the dataset + CEFR-SP: 0.570  
 
 #### Files
  - [createDataset.py](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/3_GPT-3/createDataset.py "createDataset.py") - Used to create the training dataset for gpt-3 using the provided training sentences
@@ -69,7 +69,7 @@ By prompting GPT-3-davinci only with the first example for each class in the dat
 This method did not contribute to finding our winning solution, but the impressive performance of such an easy and quick method is worth mentioning. The accuracy could probably be improved considerably by adding a few more examples, by hand-picking examples that are very representative of their class or by adapting the examples to the approximated level of the sentence.
 
 #### Accuracy
-text-davinci-003 with 6 examples: 0.402
+text-davinci-003 with 6 examples: 0.402  
 
 #### Files
  - [classify.py](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/4_few_shot/classify.py "classify.py") - To classify the unlabelled sentences using few-shot learning
@@ -91,8 +91,8 @@ In other words, we can say that, for the Kaggle competition, the real task is no
 To approximate this information about the source text, we included the Google search results for the sentence in the prompts.
 
 #### Accuracy
-Curie with api results: 0.718
-Curie with api results + scraped results: **0.735**
+Curie with api results: 0.718  
+Curie with api results + scraped results: **0.735**  
 
 #### Files
  - [customsearchAPI.py](https://github.com/JohannesDav/DMML2022_Nvidia/blob/main/code/5_GTP-3_Google/DataCollection/customsearchAPI.py "customsearchAPI.py") - Save search results using a programmable search engine and the Google cloud API. This method [is limited](https://support.google.com/programmable-search/answer/70392?hl=en#:~:text=Programmable%20Search%20Engines%20configured%20to%20search%20the%20entire%20web%20are%20limited%20to%20a%20subset%20of%20the%20total%20Google%20Web%20Search%20corpus.) and only found results for 72% of the dataset.
@@ -106,9 +106,9 @@ Curie with api results + scraped results: **0.735**
 We saw that some of the texts we had downloaded when trying to extend the dataset contained some of the sentences in our dataset. These texts are labeled with their difficulty. We observed that if a sentence is found in a text, it has an ~80% chance of being of the same diffuculty level as the text itself. About 15% of the unlabeled dataset is covered, and applying this simple search based classification on top off another model's results can improve the accuracy, especially for weaker models. This obviously exploits the fact that the model is used in a specific test enviromnent (any naming resemblance to a real company is purely coincidental.)
 
 #### Accuracy boost
-On the gtp3-curie results: 0.615 → 0.657
-On the gtp3-curie + Google api results: 0.718 → 0.727
-On the gtp3-curie + Google api + Google scrape results: 0.735 → **0.743**
+On the gtp3-curie results: 0.615 → 0.657  
+On the gtp3-curie + Google api results: 0.718 → 0.727  
+On the gtp3-curie + Google api + Google scrape results: 0.735 → **0.743**  
 
 #### Files
 
