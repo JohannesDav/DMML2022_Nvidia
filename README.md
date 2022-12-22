@@ -109,7 +109,7 @@ Level:
 
 Sentence: Bruno Bonnell Le vieil adage "on n'arrête pas le progrès" n'a jamais été aussi vivace. D'autres pays s'équipent en robotique pour atteindre des taux de productivité supérieurs aux nôtres.  
 Search results:  
-Les robots remplaceront-ils les humains au travail ? | L'Humanité --- https://www.humanite.fr/.../les-robots-remplaceront-ils-les-humains-au-travail -545785  
+Les robots remplaceront-ils les humains au travail ? | L'Humanité --- https://www.humanite.fr/.../les-robots-remplaceront-ils-les-humains-au-travail-545785  
 Level:  
 
 ##### Example 3:
