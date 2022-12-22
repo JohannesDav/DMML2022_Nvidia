@@ -129,7 +129,7 @@ Thanks to this table, it is clearly visible that our model produces far better r
 
 ## Video
 
-<video src='https://youtu.be/mGuZrLg_qPE' width=180/>
+https://youtu.be/mGuZrLg_qPE
 
 ## License
 
